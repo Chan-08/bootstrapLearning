@@ -1,18 +1,38 @@
 # Bootstrap Learning Project
 
-This project demonstrates various Bootstrap 5 concepts and components through practical examples. Each HTML file focuses on specific Bootstrap features and techniques.
+This project demonstrates Bootstrap 5 concepts through practical, self-contained examples. Explore core layout, utilities, and interactive components.
 
 ## Project Structure
 
 ```
 bootlearning/
-├── index.html                          # Basic Bootstrap setup and typography
-├── cards.html                          # Bootstrap card components
-├── form.html                          # Navigation, cards, and forms
-├── padding-margin-header-footer.html   # Spacing utilities and layout
-├── responsive.html                     # Responsive grid system
-├── styles.css                         # Custom CSS (empty - using Bootstrap)
-└── script.js                          # Custom JavaScript (empty - using Bootstrap JS)
+├── basic/
+│   ├── index.html                        # Bootstrap setup, containers, typography, grid basics
+│   ├── cards.html                        # Card components and responsive card grid
+│   ├── form.html                         # Sticky nav, horizontal cards, forms
+│   ├── padding-margin-header-footer.html # Spacing utilities, colors, flexbox
+│   └── responsive.html                   # Mobile-first breakpoints and grid responsiveness
+│
+├── components/
+│   ├── navbar.html                       # Navbar patterns
+│   ├── buttons.html                      # Button variants and states
+│   ├── list.html                         # List group and variants
+│   ├── tooltip.html                      # Tooltips
+│   ├── toast.html                        # Toasts
+│   ├── carousel.html                     # Carousel
+│   ├── popup.html                        # Modal (popup)
+│   └── accordation.html                  # Accordion
+│
+├── images/                               # Demo images used by examples
+│   ├── image-30914.jpg
+│   ├── image-33330.jpg
+│   ├── image-40964.jpg
+│   └── image-42260.jpg
+│
+├── styles.css                            # Root-level custom styles (if any)
+├── script.js                             # Root-level scripts (if any)
+├── BOOTSTRAP_REFERENCE.md                # Quick reference of utilities/components
+└── LEARNING_SUMMARY.md                   # Narrative summary of what you learned
 ```
 
 ## Learning Objectives Covered
@@ -22,7 +42,7 @@ bootlearning/
 - **Bootstrap JS CDN**: `https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js`
 - **Viewport Meta Tag**: Essential for responsive design
 
-### 2. Container System (`index.html`)
+### 2. Container System (`basic/index.html`)
 
 #### Container Types
 - **`.container`**: Fixed-width container with responsive breakpoints
@@ -37,7 +57,7 @@ bootlearning/
 - **`.col-{number}`**: Column sizes from 1-12
 - **Grid Math**: Columns should add up to 12 per row
 
-### 3. Card Components (`cards.html`)
+### 3. Card Components (`basic/cards.html`)
 
 #### Card Structure
 ```html
@@ -65,7 +85,7 @@ bootlearning/
 - **`.col-lg-3`**: 3 columns (1/4 width) on large screens and up
 - **`.col-sm-6`**: 6 columns (1/2 width) on small screens and up
 
-### 4. Navigation and Advanced Cards (`form.html`)
+### 4. Navigation and Advanced Cards (`basic/form.html`)
 
 #### Sticky Navigation
 ```html
@@ -104,7 +124,7 @@ bootlearning/
 - **`.form-check-input`**: Styled checkboxes/radios
 - **`.form-check-label`**: Labels for checkboxes/radios
 
-### 5. Spacing and Layout (`padding-margin-header-footer.html`)
+### 5. Spacing and Layout (`basic/padding-margin-header-footer.html`)
 
 #### Spacing Utility Classes
 Bootstrap uses a spacing scale from 0-5:
@@ -137,7 +157,12 @@ Bootstrap uses a spacing scale from 0-5:
 - **Background**: `.bg-primary`, `.bg-secondary`, `.bg-success`, `.bg-danger`, `.bg-warning`, `.bg-info`, `.bg-light`, `.bg-dark`
 - **Text**: `.text-white`, `.text-dark`
 
-### 6. Responsive Design (`responsive.html`)
+### 6. Responsive Design (`basic/responsive.html`)
+
+### 7. Interactive Components (`components/*`)
+
+- Navbar, Buttons, List Group, Tooltips, Toasts, Carousel, Modal (Popup), Accordion
+- Demonstrates initialization requirements (data attributes vs JS), structure, and common utility integrations
 
 #### Responsive Breakpoints
 - **`col-12`**: Full width on extra small screens (default)
@@ -195,10 +220,10 @@ This project uses Bootstrap 5.0.2, which supports:
 
 ## Getting Started
 
-1. Open any HTML file in a web browser
-2. Resize browser window to see responsive behavior
-3. Inspect elements to understand Bootstrap classes
-4. Modify classes to experiment with different layouts
+1. Open any HTML file under `basic/` or `components/` directly in a browser
+2. Ensure internet connectivity for Bootstrap 5 CDN assets
+3. Resize the browser to observe responsive behavior
+4. Inspect elements to understand applied Bootstrap classes
 
 ## Next Steps for Learning
 

@@ -64,6 +64,27 @@
 </nav>
 ```
 
+### Navbar (Responsive)
+```html
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Brand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- requires navbar-light + navbar-toggler-icon CSS from Bootstrap -->
+  <!-- include bundle JS for collapse to work -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+```
+
 ### Forms
 ```html
 <div class="mb-3">
@@ -82,6 +103,19 @@
 <button class="btn btn-secondary">Secondary</button>
 <button class="btn btn-success">Success</button>
 <button class="btn btn-danger">Danger</button>
+```
+
+### Button Sizes and Groups
+```html
+<button class="btn btn-primary btn-sm">Small</button>
+<button class="btn btn-primary">Default</button>
+<button class="btn btn-primary btn-lg">Large</button>
+
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
+  </div>
 ```
 
 ## Spacing Utilities
@@ -288,6 +322,100 @@
         </div>
     </div>
 </header>
+```
+
+### List Group
+```html
+<ul class="list-group">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item list-group-item-primary">A primary item</li>
+  <li class="list-group-item list-group-item-action">Clickable item</li>
+  <li class="list-group-item disabled">Disabled item</li>
+ </ul>
+```
+
+### Tooltips (init required)
+```html
+<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="Tooltip text">Hover me</button>
+<script>
+  const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+ </script>
+```
+
+### Toasts
+```html
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+  <div class="toast-header">
+    <strong class="me-auto">Notice</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">Hello, world!</div>
+ </div>
+<script>
+  const toastEl = document.querySelector('.toast');
+  new bootstrap.Toast(toastEl).show();
+ </script>
+```
+
+### Carousel
+```html
+<div id="demoCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active"><img src="images/image-30914.jpg" class="d-block w-100" alt="..."></div>
+    <div class="carousel-item"><img src="images/image-33330.jpg" class="d-block w-100" alt="..."></div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+ </div>
+```
+
+### Modal (Popup)
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch Modal</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">Modal body text</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+ </div>
+```
+
+### Accordion
+```html
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Item #1</button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">Content for item #1</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Item #2</button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">Content for item #2</div>
+    </div>
+  </div>
+ </div>
 ```
 
 ### Centered Form

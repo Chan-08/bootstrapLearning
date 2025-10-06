@@ -228,3 +228,41 @@ You understand both CSS Grid (Bootstrap's grid) and Flexbox (Bootstrap's flex ut
 ## Conclusion
 
 You've successfully completed a comprehensive Bootstrap learning journey. Your progression from basic containers to complex responsive layouts demonstrates solid understanding of modern web development practices. The skills you've developed are directly applicable to real-world projects and provide a strong foundation for advanced front-end development.
+
+---
+
+## 6. Interactive Components Demos (`components/*`)
+
+These examples focus on Bootstrap's JavaScript-powered components. They work via data attributes (no extra JS) or via programmatic initialization when needed. Ensure Bootstrap Bundle JS is included.
+
+### ✅ Navbar (`components/navbar.html`)
+- Responsive navigation with collapse behavior
+- Common classes: `.navbar`, `.navbar-expand-*`, `.navbar-brand`, `.navbar-toggler`, `.collapse`, `.navbar-nav`, `.nav-item`, `.nav-link`
+
+### ✅ Buttons (`components/buttons.html`)
+- Variants and sizes: `.btn` with contextual variants, `.btn-sm`, `.btn-lg`
+- Groups and states demonstrated in the page
+
+### ✅ List Group (`components/list.html`)
+- Patterns: `.list-group`, `.list-group-item`; actionable items and contextual colors
+
+### ✅ Tooltips (`components/tooltip.html`)
+- Data attributes: `data-bs-toggle="tooltip"` with `title`
+- Requires one-time JS initialization to enable: `new bootstrap.Tooltip(...)` for each trigger
+
+### ✅ Toasts (`components/toast.html`)
+- Non-blocking notifications with `.toast`
+- Show/hide via data API or JS (`new bootstrap.Toast(element).show()`)
+
+### ✅ Carousel (`components/carousel.html`)
+- Image/content slider with `.carousel`, `.carousel-inner`, `.carousel-item`
+- Controls/indicators via data attributes
+
+### ✅ Modal / Popup (`components/popup.html`)
+- Structured with `.modal`, `.modal-dialog`, `.modal-content`
+- Trigger via data attributes or JS (`new bootstrap.Modal(...)`)
+
+### ✅ Accordion (`components/accordation.html`)
+- Collapsible content using `.accordion`, `.accordion-item`, `.accordion-button`, `.accordion-collapse`
+
+**Learning**: You practiced initializing interactive components, structuring required markup, and combining them with utility classes for layout and spacing.
