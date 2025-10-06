@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Portfolio Guide</title>
+    <meta name="description" content="Explanation of Bootstrap classes and techniques used in the portfolio">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="./portfolio.html">MyPortfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#guideNav" aria-controls="guideNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="guideNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#top">Guide</a></li>
+          </ul>
+          <a class="btn btn-primary" href="./portfolio.html#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="py-5 bg-light border-bottom">
+      <div class="container">
+        <h1 class="display-6 fw-bold mb-2">Bootstrap Classes & Techniques Used</h1>
+        <p class="text-secondary mb-0">This guide explains the Bootstrap utilities and components used in the demo portfolio. No custom CSS is required.</p>
+      </div>
+    </header>
+
+    <!-- In-page navigation -->
+    <section class="py-4">
+      <div class="container">
+        <ul class="nav nav-pills flex-wrap gap-2" id="toc">
+          <li class="nav-item"><a class="nav-link" href="#layout">Layout & Containers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hero">Hero & Utilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cards">Cards & Grid</a></li>
+          <li class="nav-item"><a class="nav-link" href="#accordion">Accordion (FAQ)</a></li>
+          <li class="nav-item"><a class="nav-link" href="#forms">Forms & Validation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#helpers">Helpers & Misc</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <main class="py-2">
+      <div class="container">
+        <!-- Layout & Containers -->
+        <section id="layout" class="py-4 border-bottom">
+          <h2 class="h3">Layout & Containers</h2>
+          <p class="mb-2">The site uses <code>.container</code> to center content and apply responsive paddings. Spacing uses <code>.py-*</code>, <code>.my-*</code>, and <code>.g-*</code> utilities.</p>
+          <ul class="mb-3">
+            <li><code>.container</code>, <code>.row</code>, <code>.col-*</code> for the grid</li>
+            <li><code>.row-cols-*</code> to auto-size columns per breakpoint</li>
+            <li><code>.g-*</code> for gutters; <code>.mb-*</code>, <code>.mt-*</code>, <code>.py-*</code> for spacing</li>
+            <li><code>.bg-light</code>, <code>.bg-body-tertiary</code>, <code>.border-bottom</code> for section styling</li>
+          </ul>
+          <div class="alert alert-info">Tip: Use responsive classes like <code>.row-cols-lg-3</code> to change layouts across breakpoints.</div>
+        </section>
+
+        <!-- Navbar -->
+        <section id="navbar" class="py-4 border-bottom">
+          <h2 class="h3">Navbar</h2>
+          <p>Built with <code>.navbar</code>, <code>.navbar-expand-lg</code>, <code>.navbar-toggler</code>, and a collapsible <code>.navbar-collapse</code>.</p>
+          <div class="card">
+            <div class="card-body">
+              <ul class="mb-0">
+                <li><code>.sticky-top</code> keeps the navbar fixed within normal flow</li>
+                <li><code>.bg-body-tertiary</code> + <code>.border-bottom</code> provide subtle separation</li>
+                <li>Buttons use <code>.btn</code> variants: <code>.btn-primary</code>, <code>.btn-outline-secondary</code></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hero & Utilities -->
+        <section id="hero" class="py-4 border-bottom">
+          <h2 class="h3">Hero & Utilities</h2>
+          <p>Typography uses <code>.display-*</code>, <code>.lead</code>, and weight classes like <code>.fw-bold</code>. Media uses <code>.ratio</code> for responsive aspect ratios.</p>
+          <ul>
+            <li><code>.badge</code> and <code>.text-bg-*</code> for labeled chips</li>
+            <li><code>.ratio .ratio-16x9</code> to maintain a 16:9 image frame</li>
+            <li><code>.object-fit-cover</code> to crop images within containers</li>
+            <li><code>.d-flex</code>, <code>.gap-2</code>, <code>.flex-wrap</code> to control layout spacing</li>
+          </ul>
+          <div class="ratio ratio-16x9 rounded overflow-hidden bg-body">
+            <img src="https://picsum.photos/200/300" class="object-fit-cover" alt="Example image">
+          </div>
+        </section>
+
+        <!-- Cards & Grid -->
+        <section id="cards" class="py-4 border-bottom">
+          <h2 class="h3">Cards & Grid</h2>
+          <p>Projects use the card component with headers, footers, and images. The grid is responsive via <code>.row-cols-*</code>.</p>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img src="https://picsum.photos/200/300" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                  <h3 class="h6 card-title mb-1">Example Card</h3>
+                  <p class="card-text">Using <code>.card</code>, <code>.card-img-top</code>, and spacing utilities.</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pt-0">
+                  <a href="#" class="btn btn-sm btn-outline-secondary">Action</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accordion -->
+        <section id="accordion" class="py-4 border-bottom">
+          <h2 class="h3">Accordion (FAQ)</h2>
+          <p>Built with the <code>.accordion</code> component, driven by collapse JavaScript included in the Bootstrap bundle.</p>
+          <div class="accordion" id="guideAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="ga1h">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ga1" aria-expanded="true" aria-controls="ga1">How collapse works</button>
+              </h2>
+              <div id="ga1" class="accordion-collapse collapse show" aria-labelledby="ga1h" data-bs-parent="#guideAcc">
+                <div class="accordion-body">Each accordion body is a collapse target toggled by an associated button using <code>data-bs-target</code>.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Forms & Validation -->
+        <section id="forms" class="py-4 border-bottom">
+          <h2 class="h3">Forms & Validation</h2>
+          <p>Uses <code>.form-floating</code> for floating labels, <code>.input-group</code> for prefixed inputs, and the custom validation styles with <code>.was-validated</code>.</p>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="exname" placeholder="Name" required>
+                  <label for="exname">Name</label>
+                  <div class="invalid-feedback">Name required.</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="exmail" placeholder="email" required>
+                  <label for="exmail">Email</label>
+                  <div class="invalid-feedback">Valid email required.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" placeholder="Username" required>
+                  <div class="invalid-feedback">Username required.</div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-between align-items-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="exagree" required>
+                  <label class="form-check-label" for="exagree">Agree</label>
+                  <div class="invalid-feedback">Please agree.</div>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- Helpers & Misc -->
+        <section id="helpers" class="py-4">
+          <h2 class="h3">Helpers & Misc</h2>
+          <ul>
+            <li><code>.alert</code> for callouts</li>
+            <li><code>.badge</code> and <code>.rounded-pill</code> for labels</li>
+            <li><code>.text-secondary</code>, <code>.link-secondary</code> for muted text/links</li>
+            <li><code>.shadow-sm</code>, <code>.rounded</code> for subtle depth and shape</li>
+          </ul>
+          <div class="alert alert-primary">Explore the source of <a href="./portfolio.html" class="alert-link">portfolio.html</a> to see these in context.</div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="border-top py-4 bg-body-tertiary">
+      <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+        <div class="text-secondary">Guide · Bootstrap-only</div>
+        <a class="btn btn-outline-secondary btn-sm" href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (function () {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      })();
+    </script>
+  </body>
+  </html>
+
+
